@@ -6,16 +6,16 @@ body {
   font-family: Courier, monospace;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #c4d9b4;
+  color: #133605;
 }
-
+  
 /* Header styles */
 header {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #4a4e69;
+  background-color: #60854c;
   color: white;
 }
 
@@ -32,14 +32,19 @@ header {
 }
 
 .nav-bar li {
-  margin: 0 15px;
+  margin: 30px;
+  font-size: 20px;
 }
 
 .nav-bar a {
   text-decoration: none;
-  color: white;
+  color: #ebf7d5;
   font-weight: bold;
 }
+
+  a:hover {
+    color: #304013;
+  }
   
 /* Games Page styles */
 .games {
@@ -94,23 +99,44 @@ header {
   width: 75%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+/* Top banner */
+.container {
+  position: relative;
+  text-align: center;
+  border: 10px solid #cbf23c;
+  color: white;
 }
   
+.container img {
+  opacity: 0.8;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  height: 20%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  
+.bg-text h1 {
+  font-family: Lucida Console, monospace;
+  background-color: rgba(0,0,0, 0.6);
+  border: 5px solid #cbf23c;
+  padding: 20px;
+  }
+  
   </style>
+  
 <!-- Content -->
 <head>
   <meta charset="UTF-8">
@@ -119,11 +145,13 @@ header {
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
   <!-- Logo that links back to the homepage -->
   <header>
     <a href="https://dreamingofyuu.github.io/fan_yukie_a3/">
       <img src="logo.png" alt="Gamiverse Logo" class="logo">
     </a>
+    
     <!-- Navigation bar -->
     <nav>
       <ul class="nav-bar">
@@ -133,10 +161,17 @@ header {
       </ul>
     </nav>
   </header>
+  
+   <!-- Top banner -->
+    <div class="container">
+    <img src="2.jpg" alt="EA Sports Banner" style="width:100%;">
+    <div class="bg-text"><h1>
+      EA Sports</h1></div>
+  </div>
+  
   <!-- Games Section -->
   <main class="games">
-    <h1>EA Sports</h1>
-    
+  
     <!-- The Sims 4  -->
     <section id="The Sims 4" class="games">
       <h2>The Sims 4</h2>
